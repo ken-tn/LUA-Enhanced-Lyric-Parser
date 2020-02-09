@@ -3,7 +3,7 @@ Lua Module to Parse ELRC file format
 
 Use parse.lua convertLyrics with the full lyrics file as string argument
 
-Table Format:
+Example Output:
 {
   ["Title"] = "Hi",
   ["Language"] = "English"
