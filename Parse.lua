@@ -1,13 +1,17 @@
 --[[
 	Table Format:
 	{
-		LINE {
-			{TIME, WORD},
-			{TIME, WORD}
-		},
-		LINE {
-			{TIME, WORD},
-			{TIME, WORD}
+		["Title"] = "Hi",
+		["Language"] = "English"
+		["Lines"] = {
+			LINENUMBER {
+				{TIME, WORD},
+				{TIME, WORD}
+			},
+			LINENUMBER {
+				{TIME, WORD},
+				{TIME, WORD}
+			}
 		}
 	}
 --]]
