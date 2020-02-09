@@ -1,21 +1,3 @@
---[[
-	Table Format:
-	{
-		["Title"] = "Hi",
-		["Language"] = "English"
-		["Lines"] = {
-			LINENUMBER {
-				{TIME, WORD},
-				{TIME, WORD}
-			},
-			LINENUMBER {
-				{TIME, WORD},
-				{TIME, WORD}
-			}
-		}
-	}
---]]
-
 --Split all lines up
 function splitLines(lyrics)
 	local linesTable = {}
