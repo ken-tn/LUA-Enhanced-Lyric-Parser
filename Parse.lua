@@ -1,8 +1,5 @@
---local table_print = require(script.Dumper)
-
 --[[
 	Table Format:
-	
 	{
 		LINE {
 			{TIME, WORD},
