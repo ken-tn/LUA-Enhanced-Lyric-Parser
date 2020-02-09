@@ -65,5 +65,3 @@ function convertLyrics(lyrics)
 	
 	return lyricsTable
 end
-
-return convertLyrics
