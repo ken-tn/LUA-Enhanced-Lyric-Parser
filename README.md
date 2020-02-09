@@ -1,8 +1,7 @@
 # LUA-Enhanced-Lyric-Parser
 Lua Module to Parse ELRC file format
 
-How to use:
-Call function convertLyrics with the full lyrics file to get lua table output
+Use parse.lua convertLyrics with the full lyrics file as string argument
 
 Table Format:
 {
