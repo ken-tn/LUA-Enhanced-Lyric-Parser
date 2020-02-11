@@ -1,3 +1,21 @@
+--[[
+	Table Format:
+	{
+		["Title"] = "Hi",
+		["Language"] = "English"
+		["Lines"] = {
+			LINENUMBER {
+				{TIME, WORD},
+				{TIME, WORD}
+			},
+			LINENUMBER {
+				{TIME, WORD},
+				{TIME, WORD}
+			}
+		}
+	}
+--]]
+
 --Split all lines up
 function splitLines(lyrics)
 	local linesTable = {}
@@ -40,8 +58,10 @@ function formatLines(linesTable)
 	
 	for _, line in pairs(linesTable) do
 		local tag, value = line:match("%[(%a+):(.-)%]")
+		local marked = false
 		
 		if tag and value then
+			marked = true
 			if tag == "ti" then
 				lyrics.Title = value
 			elseif tag == "la" then
@@ -53,7 +73,9 @@ function formatLines(linesTable)
 			end
 		end
 		
-		table.insert(lyrics["Lines"], formatLyricLine(line))
+		if not marked then
+			table.insert(lyrics["Lines"], formatLyricLine(line))
+		end
 	end
 
 	return lyrics
@@ -65,3 +87,5 @@ function convertLyrics(lyrics)
 	
 	return lyricsTable
 end
+
+return convertLyrics
